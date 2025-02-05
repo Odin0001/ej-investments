@@ -306,10 +306,10 @@ function Dashboard() {
         </div>
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-46' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal through the following email: support@ej-investments.com</p>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal through the following email: support@ej-investments.info</p>
         </div>
       </div>
-      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team: support@ej-investments.com</p>
+      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team: support@ej-investments.info</p>
     </div>
   );
 }
@@ -366,7 +366,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: support@ej-investments.com</li>
+              <li>Email: support@ej-investments.info</li>
               <li>Phone: +44 020 8947 1859</li>
               <li>Address: 6 Back Lane, London, United Kingdom</li>
             </ul>
