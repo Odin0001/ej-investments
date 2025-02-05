@@ -222,7 +222,7 @@ function Home() {
           <Step
             number="3"
             title="Start Earning"
-            description="we stake the money for you and you get 3% of your deposited capital per day."
+            description="we stake the money for you and you get up to 3% of your deposited capital per day."
           />
         </div>
         <div className='my-10 text-gray-900 md:text-lg text-md text-center'>
