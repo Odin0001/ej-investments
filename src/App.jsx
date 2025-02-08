@@ -225,10 +225,6 @@ function Home() {
             description="we stake the money for you and you get up to 3% of your deposited capital per day."
           />
         </div>
-        <div className='my-10 text-gray-900 md:text-lg text-md text-center'>
-          <p>Disclaimer: the 3% of profits is calculated from your deposit without compounding your profits. You can only request a payout of the profit after at least 24 hours.</p>
-          <p>All payments are verified between 7 p.m and 9 p.m London time.</p>
-        </div>
       </div>
     </div>
   );
@@ -305,9 +301,15 @@ function Dashboard() {
             <li>- TRON (TRX) & Tether (USDT trc20) wallets address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>TU7zipv2A1jdjCTFNDwzkaVL9ocWbogjem</span></li>
           </ul>
         </div>
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-40' : 'h-18'}`} onClick={handleWithdrawMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-64' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
           <p className="text-gray-600 group-hover:text-white">Send your wallet ID with your username and the amount of money you want to withdraw in the body of the email to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">PS: Our minimal withdrawal amount for each currency are as follow:</p>
+          <ul className="text-gray-600 group-hover:text-white text-wrap>
+            <li>- Usdt 10$</li>
+            <li>- Trx 5$</li>
+            <li>- Litecoin 1$</li>
+          </ul>
         </div>
       </div>
       <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
