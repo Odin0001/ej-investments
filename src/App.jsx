@@ -285,7 +285,7 @@ function Dashboard() {
       <h1 className="text-3xl font-bold text-gray-900">
         Welcome back, {user?.displayName || 'Investor'}!
       </h1>
-      <h2 className="text-2xl text-gray-900">Please send your ID copy in order to verify your account, you will receive a confirmation on your registered email.</h2>
+      <h2 className="text-2xl text-gray-900 my-4">Please send your ID copy in order to verify your account <a href="mailto:support@ej-investments.info" className='underline'>here</a>, you will receive a confirmation on your registered email.</h2>
       <h2 className='text-3xl text-gray-600 my-10'>Your current balance is <span className='text-blue-600'>{balance}$</span></h2>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'h-max' : 'h-18'}`} onClick={handleDepositMenu}>
