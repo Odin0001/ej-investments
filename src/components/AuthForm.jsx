@@ -90,14 +90,6 @@ export function AuthForm({ type }) {
             />
           </div>
 
-          {type === 'register' && <div className="relative">
-            <div className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-800'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-id-card"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></svg>
-            </div>
-            <input type="file" accept=".jpg, .jpeg, .png" id='file' className='hidden' onChange={(e) => setFile(e.target.files[0])} required />
-            <label htmlFor="file" className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-500 cursor-pointer">{file === '' ? 'Please upload your ID photo' : file.name}</label>
-          </div>}
-
           {error && (
             <div className="bg-red-50 text-red-500 p-3 rounded-lg text-sm">
               {error}
