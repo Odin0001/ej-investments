@@ -289,6 +289,7 @@ function Dashboard() {
       <h1 className="text-3xl font-bold text-gray-900">
         Welcome back, {user?.displayName || 'Investor'}!
       </h1>
+      <h2 className="text-2xl text-gray-900">Please send your ID copy in order to verify your account, you will receive a confirmation on your registered email.</h2>
       <h2 className='text-3xl text-gray-600 my-10'>Your current balance is <span className='text-blue-600'>{balance}$</span></h2>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'h-max' : 'h-18'}`} onClick={handleDepositMenu}>
@@ -296,7 +297,7 @@ function Dashboard() {
           <p className="text-gray-600 group-hover:text-white">1- Choose your prefered crypto wallet.</p>
           <p className="text-gray-600 group-hover:text-white">2- Complete your transaction.</p>
           <p className="text-gray-600 group-hover:text-white">3- Take a screenshot of the transaction from your wallet after its completed.</p>
-          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with a copy of your ID on the first deposit with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with your username in the body of the email with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
@@ -306,7 +307,7 @@ function Dashboard() {
         </div>
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-40' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID and the desired amount of money you want to withdraw to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID with your username and the amount of money you want to withdraw in the body of the email to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
         </div>
       </div>
       <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
