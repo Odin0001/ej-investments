@@ -301,10 +301,10 @@ function Dashboard() {
             <li>- TRON (TRX) & Tether (USDT trc20) wallets address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>TU7zipv2A1jdjCTFNDwzkaVL9ocWbogjem</span></li>
           </ul>
         </div>
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-64' : 'h-18'}`} onClick={handleWithdrawMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-max' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
           <p className="text-gray-600 group-hover:text-white">Send your wallet ID with your username and the amount of money you want to withdraw in the body of the email to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
-          <p className="text-gray-600 group-hover:text-white">PS: Our minimal withdrawal amount for each currency are as follow:</p>
+          <p className="text-gray-600 group-hover:text-white my-4">PS: Our minimal withdrawal amount for each currency are as follow:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
             <li>- Usdt 10$</li>
             <li>- Trx 5$</li>
