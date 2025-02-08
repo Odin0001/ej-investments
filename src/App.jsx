@@ -291,12 +291,12 @@ function Dashboard() {
       </h1>
       <h2 className='text-3xl text-gray-600 my-10'>Your current balance is <span className='text-blue-600'>{balance}$</span></h2>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'xl:h-92 h-max' : 'h-18'}`} onClick={handleDepositMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'h-max' : 'h-18'}`} onClick={handleDepositMenu}>
           <h2 className="text-xl font-semibold mb-4 text-blue-600 group-hover:text-white">Deposit</h2>
           <p className="text-gray-600 group-hover:text-white">1- Choose your prefered crypto wallet.</p>
           <p className="text-gray-600 group-hover:text-white">2- Complete your transaction.</p>
           <p className="text-gray-600 group-hover:text-white">3- Take a screenshot of the transaction from your wallet after its completed.</p>
-          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with a copy of your ID on the first deposit with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
