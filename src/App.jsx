@@ -296,7 +296,7 @@ function Dashboard() {
           <p className="text-gray-600 group-hover:text-white">1- Choose your prefered crypto wallet.</p>
           <p className="text-gray-600 group-hover:text-white">2- Complete your transaction.</p>
           <p className="text-gray-600 group-hover:text-white">3- Take a screenshot of the transaction from your wallet after its completed.</p>
-          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with our support team to verify the transaction through the following <a href="mailto:support@ej-investments.info">link</a></p>
+          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
@@ -306,10 +306,10 @@ function Dashboard() {
         </div>
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-46' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal through the following <a href="mailto:support@ej-investments.info">link</a></p>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
         </div>
       </div>
-      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team through the following <a href="mailto:support@ej-investments.info">link</a></p>
+      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
     </div>
   );
 }
