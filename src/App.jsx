@@ -306,7 +306,7 @@ function Dashboard() {
         </div>
         <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-32' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID and the desired amount of money you want to withdraw to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
         </div>
       </div>
       <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
