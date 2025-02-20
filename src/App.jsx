@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { TrendingUp, LogIn, UserPlus, BarChart2, BookOpen, PieChart, CheckCircle, Menu, X } from 'lucide-react';
 import { AuthForm } from './components/AuthForm';
@@ -10,11 +10,12 @@ import { db } from './lib/firebase';
 import { doc, getDoc } from "firebase/firestore";
 import logo from '/logo.png'
 import logoWhite from '/logo-white.png'
+import { AdminPanel } from './components/AdminPanel';
 
 function App() {
   const { user } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
 
   const handleLogout = async () => {
     try {
@@ -144,6 +145,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
 
         <Footer />
@@ -222,8 +224,12 @@ function Home() {
           <Step
             number="3"
             title="Start Earning"
-            description="we stake the money for you and you get up to 3% of your deposited capital per day."
+            description="we stake the money for you and you get 3% of your deposited capital per day."
           />
+        </div>
+        <div className='my-10 text-gray-900 md:text-lg text-md text-center'>
+          <p>Disclaimer: the 3% of profits is calculated from your deposit without compounding your profits. You can only request a payout of the profit after at least 24 hours.</p>
+          <p>All payments are verified between 7 p.m and 9 p.m London time.</p>
         </div>
       </div>
     </div>
@@ -285,15 +291,14 @@ function Dashboard() {
       <h1 className="text-3xl font-bold text-gray-900">
         Welcome back, {user?.displayName || 'Investor'}!
       </h1>
-      <h2 className="text-2xl text-gray-900 my-4">Please send your ID copy in order to verify your account <a href="mailto:support@ej-investments.info" className='underline'>here</a>, you will receive a confirmation on your registered email.</h2>
       <h2 className='text-3xl text-gray-600 my-10'>Your current balance is <span className='text-blue-600'>{balance}$</span></h2>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'h-max' : 'h-18'}`} onClick={handleDepositMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'xl:h-92 h-max' : 'h-18'}`} onClick={handleDepositMenu}>
           <h2 className="text-xl font-semibold mb-4 text-blue-600 group-hover:text-white">Deposit</h2>
           <p className="text-gray-600 group-hover:text-white">1- Choose your prefered crypto wallet.</p>
           <p className="text-gray-600 group-hover:text-white">2- Complete your transaction.</p>
           <p className="text-gray-600 group-hover:text-white">3- Take a screenshot of the transaction from your wallet after its completed.</p>
-          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with your username in the body of the email with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with our support team to verify the transaction.</p>
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
@@ -301,18 +306,12 @@ function Dashboard() {
             <li>- TRON (TRX) & Tether (USDT trc20) wallets address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>TU7zipv2A1jdjCTFNDwzkaVL9ocWbogjem</span></li>
           </ul>
         </div>
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-max' : 'h-18'}`} onClick={handleWithdrawMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-46' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID with your username and the amount of money you want to withdraw in the body of the email to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
-          <p className="text-gray-600 group-hover:text-white my-4">PS: Our minimal withdrawal amount for each currency are as follow:</p>
-          <ul className="text-gray-600 group-hover:text-white text-wrap">
-            <li>- Usdt 10$</li>
-            <li>- Trx 5$</li>
-            <li>- Litecoin 1$</li>
-          </ul>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal through the following email: support@ej-investments.com</p>
         </div>
       </div>
-      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team: support@ej-investments.com</p>
     </div>
   );
 }
@@ -369,7 +368,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: support@ej-investments.info</li>
+              <li>Email: support@ej-investments.com</li>
               <li>Phone: +44 020 8947 1859</li>
               <li>Address: 6 Back Lane, London, United Kingdom</li>
             </ul>
