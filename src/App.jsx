@@ -293,12 +293,12 @@ function Dashboard() {
       </h1>
       <h2 className='text-3xl text-gray-600 my-10'>Your current balance is <span className='text-blue-600'>{balance}$</span></h2>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'xl:h-92 h-max' : 'h-18'}`} onClick={handleDepositMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-blue-600 transition-all duration-300 ease cursor-pointer ${isDepositOpen ? 'h-max' : 'h-18'}`} onClick={handleDepositMenu}>
           <h2 className="text-xl font-semibold mb-4 text-blue-600 group-hover:text-white">Deposit</h2>
           <p className="text-gray-600 group-hover:text-white">1- Choose your prefered crypto wallet.</p>
           <p className="text-gray-600 group-hover:text-white">2- Complete your transaction.</p>
           <p className="text-gray-600 group-hover:text-white">3- Take a screenshot of the transaction from your wallet after its completed.</p>
-          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with our support team to verify the transaction.</p>
+          <p className="text-gray-600 group-hover:text-white">4- Share the screenshot with your username in the body of the email with our support team to verify the transaction <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
@@ -306,12 +306,18 @@ function Dashboard() {
             <li>- TRON (TRX) & Tether (USDT trc20) wallets address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>TU7zipv2A1jdjCTFNDwzkaVL9ocWbogjem</span></li>
           </ul>
         </div>
-        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-46' : 'h-18'}`} onClick={handleWithdrawMenu}>
+        <div className={`bg-white p-6 rounded-lg shadow-md overflow-hidden group hover:bg-red-600 transition-all duration-300 ease cursor-pointer ${isWithdrawOpen ? 'h-max' : 'h-18'}`} onClick={handleWithdrawMenu}>
           <h2 className="text-xl font-semibold mb-4 text-red-600 group-hover:text-white">Withdraw</h2>
-          <p className="text-gray-600 group-hover:text-white">Send your wallet ID to our support team to verify your withdrawal through the following email: support@ej-investments.com</p>
+          <p className="text-gray-600 group-hover:text-white">Send your wallet ID with your username and the amount of money you want to withdraw in the body of the email to our support team to verify your withdrawal <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
+          <p className="text-gray-600 group-hover:text-white my-4">PS: Our minimal withdrawal amount for each currency are as follow:</p>
+          <ul className="text-gray-600 group-hover:text-white text-wrap">
+            <li>- Usdt 10$</li>
+            <li>- Trx 5$</li>
+            <li>- Litecoin 1$</li>
+          </ul>
         </div>
       </div>
-      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team: support@ej-investments.com</p>
+      <p className='mt-10 text-gray-600'>In case of any technical issues, please do not hesitate to reach our support team <a href="mailto:support@ej-investments.info" className='underline'>here</a></p>
     </div>
   );
 }
