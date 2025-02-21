@@ -374,7 +374,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: support@ej-investments.com</li>
+              <li>Email: support@ej-investments.info</li>
               <li>Phone: +44 020 8947 1859</li>
               <li>Address: 6 Back Lane, London, United Kingdom</li>
             </ul>
