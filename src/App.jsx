@@ -303,7 +303,6 @@ function Dashboard() {
           <h2 className="text-xl font-semibold my-4 text-gray-600 group-hover:text-white">Our payment methods</h2>
           <p className="text-gray-600 mb-4 group-hover:text-white">Copy the prefered wallet address:</p>
           <ul className="text-gray-600 group-hover:text-white text-wrap">
-            <li>- Litecion (LTC) wallet address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>ltc1qteqggu76z33dss0dpdgxfl2mr3vf7963wsgvxg</span></li>
             <li>- TRON (TRX) & Tether (USDT trc20) wallets address: <span className='text-blue-600 group-hover:text-white lg:text-[16px] text-xs'>TU7zipv2A1jdjCTFNDwzkaVL9ocWbogjem</span></li>
           </ul>
         </div>
@@ -314,7 +313,6 @@ function Dashboard() {
           <ul className="text-gray-600 group-hover:text-white text-wrap">
             <li>- Usdt 10$</li>
             <li>- Trx 5$</li>
-            <li>- Litecoin 1$</li>
           </ul>
         </div>
       </div>
